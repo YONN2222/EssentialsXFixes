@@ -1,0 +1,27 @@
+# EssentialsXFixes configuration
+# Use /essentialsxfixes reload (permission essentialsxfixes.reload) to apply changes.
+
+# Language file from plugins/EssentialsXFixes/lang/ without the .yml ending.
+# Bundled: en, zh, es, hi, fr, ar, pt, ru, de, ja
+language: en
+
+selectors:
+  # Allow @a @p @r @s @e @n with filters in EssentialsX commands.
+  enabled: true
+
+# Switch off single additions to EssentialsX commands.
+extensions:
+  tp: true
+  kill: true
+  clear: true
+  enchant: true
+  give: true
+  item: true
+  recipe: true
+  list: true
+  xp: true
+  time: true
+  weather: true
+
+# Command names this plugin never touches. Needs a restart.
+exclude: []

@@ -1,0 +1,21 @@
+name: ${name}
+version: ${version}
+main: com.yonn2222.essentialsxfixes.EssentialsXFixes
+api-version: '1.21'
+depend: [Essentials]
+authors: [${author}]
+description: ${description}
+website: ${website}
+permissions:
+  essentialsxfixes.selectors:
+    description: Use target selectors in EssentialsX commands
+    default: true
+  essentialsxfixes.reload:
+    description: Reload the configuration
+    default: op
+  essentialsxfixes.*:
+    description: All EssentialsXFixes permissions
+    default: op
+    children:
+      essentialsxfixes.selectors: true
+      essentialsxfixes.reload: true
