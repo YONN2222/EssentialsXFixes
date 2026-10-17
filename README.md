@@ -17,7 +17,7 @@
 
 > EssentialsX Fixes is a small open source addon for EssentialsX. EssentialsX replaces several vanilla commands with its own, simpler ones, and everything only the vanilla command could do stops working. This addon brings those functions back inside the same commands. Unofficial addon, not affiliated with or endorsed by the EssentialsX team.
 
-Run `/execute in minecraft:the_end run tp @s 100 100 100` with EssentialsX alone and you end up in the wrong world. Run `/xp add Steve 10 levels` and you get an error. Use `@a` in the console or a command block and nothing happens. With EssentialsX Fixes all of that works, and the EssentialsX syntax stays exactly as it was.
+Run `/execute in minecraft:the_end run tp @s 100 100 100` with EssentialsX alone and you end up in the wrong world. Run `/xp add Steve 10 levels` and you get an error. Use `@a` in the console or a command block and nothing happens. With EssentialsX Fixes all of that works, and the EssentialsX syntax stays exactly as it was. No vanilla command is ever called, the plugin does the work itself.
 
 ## Before and after
 
@@ -84,7 +84,7 @@ The jar ends up in `build/libs`. Java 25 is used to build, the plugin itself tar
 
 ## Privacy
 
-EssentialsXFixes reports anonymous usage statistics to bStats. Turn it off for all plugins in `plugins/bStats/config.yml`. Nothing else leaves your server.
+EssentialsXFixes reports anonymous usage statistics to [bStats](https://bstats.org/plugin/bukkit/XFixes/34778). Turn it off for all plugins in `plugins/bStats/config.yml`. Nothing else leaves your server.
 
 ## License
 
