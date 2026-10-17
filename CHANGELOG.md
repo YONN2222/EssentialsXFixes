@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.0.1]
+
+- Fixed EssentialsX commands such as `/fly` and `/heal` disappearing after `/reload`, only the `/essentials:` versions were left
+
 ## [1.0.0]
 
 - Target selectors `@a @p @r @s @e @n` with all filters in every EssentialsX command, from the console, command blocks and inside `/execute`

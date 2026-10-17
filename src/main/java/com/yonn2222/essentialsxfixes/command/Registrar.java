@@ -33,6 +33,7 @@ public final class Registrar {
     private final Plugin essentials;
     private final Predicate<String> skipped;
     private final Logger logger;
+    private Set<String> owned;
 
     public Registrar(Router router, Plugin essentials, Predicate<String> skipped, Logger logger) {
         this.router = router;
@@ -42,9 +43,18 @@ public final class Registrar {
     }
 
     public int registerAll(Commands commands) {
+        if (owned == null) {
+            Set<String> found = new LinkedHashSet<>();
+            for (String label : router.catalog().labels()) {
+                if (ownedByEssentials(label)) {
+                    found.add(label);
+                }
+            }
+            owned = found;
+        }
         int count = 0;
-        for (String label : router.catalog().labels()) {
-            if (skipped.test(label) || !ownedByEssentials(label)) {
+        for (String label : owned) {
+            if (skipped.test(label)) {
                 continue;
             }
             commands.register(node(label).build());
