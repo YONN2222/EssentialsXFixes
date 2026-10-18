@@ -21,7 +21,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class LanguageFilesTest {
-    private static final Pattern PLACEHOLDER = Pattern.compile("<(label|prefix|who|where|count|what|item|slot|name|uuid|value|world|weather)>");
+    private static final Pattern PLACEHOLDER = Pattern.compile("<(label|who|where|count|what|item|slot|name|uuid|value|world|weather)>");
 
     private static YamlConfiguration load(String code) {
         var stream = LanguageFilesTest.class.getResourceAsStream("/lang/" + code + ".yml");
@@ -54,7 +54,7 @@ class LanguageFilesTest {
     void everyMessageParsesAsMiniMessage(String code) {
         YamlConfiguration file = load(code);
         TagResolver.Builder builder = TagResolver.builder();
-        for (String name : List.of("label", "prefix", "who", "where", "count", "what", "item", "slot", "name", "uuid", "value", "world", "weather")) {
+        for (String name : List.of("label", "who", "where", "count", "what", "item", "slot", "name", "uuid", "value", "world", "weather")) {
             builder.resolver(Placeholder.unparsed(name, "x"));
         }
         TagResolver resolver = builder.build();
@@ -63,10 +63,5 @@ class LanguageFilesTest {
             assertTrue(!text.isBlank(), code + ":" + key);
             MiniMessage.builder().strict(false).build().deserialize(text, resolver);
         }
-    }
-
-    @Test
-    void englishDefinesThePrefixTag() {
-        assertTrue(load("en").getString("reloaded").contains("<prefix>"));
     }
 }

@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.0.2]
+
+- Messages now look like EssentialsX messages: no prefix, gold text, red values and the same error style
+
 ## [1.0.1]
 
 - Fixed EssentialsX commands such as `/fly` and `/heal` disappearing after `/reload`, only the `/essentials:` versions were left

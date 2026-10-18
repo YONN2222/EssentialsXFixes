@@ -22,7 +22,6 @@ Copy a file in `plugins/XFixes/lang`, rename it, translate it and set its name a
 
 | Placeholder | Used in |
 |---|---|
-| `<prefix>` | every message |
 | `<label>` | errors, the command that was used |
 | `<who>` | the player or entity name |
 | `<where>`, `<count>`, `<item>`, `<what>`, `<slot>`, `<value>`, `<world>`, `<weather>`, `<name>`, `<uuid>` | the message that shows that value |

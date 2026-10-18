@@ -57,7 +57,6 @@ public final class Messages {
 
     public Component get(String key, TagResolver... resolvers) {
         List<TagResolver> all = new ArrayList<>(List.of(resolvers));
-        all.add(Placeholder.parsed("prefix", raw("prefix")));
         return MINI.deserialize(raw(key), TagResolver.resolver(all));
     }
 
