@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://modrinth.com/plugin/essentialsx-fixes">Modrinth</a>
-  <a href="https://hangar.papermc.io/YONN2222/XFixes">Hangar</a>
+  <a href="https://hangar.papermc.io/YONN2222/EssentialsX-Fixes">Hangar</a>
   <a href="https://github.com/YONN2222/EssentialsXFixes/releases">GitHub Releases</a>
 </p>
 
